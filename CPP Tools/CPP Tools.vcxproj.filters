@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="mem">
+      <UniqueIdentifier>{e8426112-ee76-4d89-9182-f84fff20bb31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="injector">
+      <UniqueIdentifier>{1b8ab8d6-778d-4067-962b-93c1580e977a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="proc">
+      <UniqueIdentifier>{527b7118-5148-4468-817f-dad005b13882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sigscan">
+      <UniqueIdentifier>{71b5ade1-6240-4a4d-b8c6-db5d0e5e308d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{695b8aac-bdc1-4f78-bb45-13dee0c6b1d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ErrorHandling">
+      <UniqueIdentifier>{a0b7c9b3-aaaf-43f0-a039-1caf196a7b20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hook">
+      <UniqueIdentifier>{5778ee03-4774-45e8-a301-7544c7442a81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGl">
+      <UniqueIdentifier>{b5d5f134-0efd-4738-8765-4e39270e0ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="geometry">
+      <UniqueIdentifier>{ff2dc450-3f72-41dc-906c-060dfc143fb6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mem\mem.cpp">
+      <Filter>mem</Filter>
+    </ClCompile>
+    <ClCompile Include="injector\injector.cpp">
+      <Filter>injector</Filter>
+    </ClCompile>
+    <ClCompile Include="proc\proc.cpp">
+      <Filter>proc</Filter>
+    </ClCompile>
+    <ClCompile Include="sigscan\sigscan.cpp">
+      <Filter>sigscan</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx\stdafx.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="errorhandling\ErrorHandling.cpp">
+      <Filter>ErrorHandling</Filter>
+    </ClCompile>
+    <ClCompile Include="hook\hook.cpp">
+      <Filter>hook</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGl\OpenGl.cpp">
+      <Filter>OpenGl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mem\mem.h">
+      <Filter>mem</Filter>
+    </ClInclude>
+    <ClInclude Include="injector\injector.h">
+      <Filter>injector</Filter>
+    </ClInclude>
+    <ClInclude Include="proc\proc.h">
+      <Filter>proc</Filter>
+    </ClInclude>
+    <ClInclude Include="sigscan\sigscan.h">
+      <Filter>sigscan</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx\stdafx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="errorhandling\ErrorHandling.h">
+      <Filter>ErrorHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="hook\hook.h">
+      <Filter>hook</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGl\OpenGl.h">
+      <Filter>OpenGl</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\geometry.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
