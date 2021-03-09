@@ -33,3 +33,6 @@
 
 # Build
 ./Debug/
+
+# VS
+/.vs
