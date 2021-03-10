@@ -35,6 +35,11 @@ bool Detour32(void* toHook, void* myFunct, int len) {
 	return true;
 }
 
+/// <summary>
+/// Reads bytes of signed integer in the correct endian order
+/// </summary>
+/// <param name="x">src to start of integer</param>
+/// <returns>signed int read from bytes</returns>
 signed int read_bytes(BYTE* x)
 {
 	static_assert (CHAR_BIT == 8, "CHAR_BIT != 8");
@@ -65,11 +70,19 @@ char* TrampolineHook32(char* src, char* dst, const intptr_t len) {
 	// Copy original bytes to the gateway
 	memcpy(gateway, src, len);
 
-
+	// Check if the first byte is E8, if it is then fix the relative offset for the copied bytes.
+	// if this is not done then the hooked original jump will not work as it points to the wrong spot.
 	if ((int)*(src) == -24)
 	{
+		// Reads the 4 bytes after E8 to see original offset
 		signed int x = read_bytes((BYTE*)(src + sizeof(BYTE)));
+
+		// Calculate new offset
+		// src + (x+5)/4 gets the address the offset was pointing to
+		// - gateway * 4) - 5 gets the new offset
 		signed int newX = ((((int*)src + ((x + 5) / 4)) - (int*)gateway) * 4) - 5;
+
+		// Copy new offset to the hooked bytes
 		*(gateway + 1) = newX;
 		*(gateway + 2) = (int)*((BYTE*)&newX + 1 * sizeof(BYTE));
 		*(gateway + 3) = (int)*((BYTE*)&newX + 2 * sizeof(BYTE));
