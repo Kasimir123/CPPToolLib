@@ -32,7 +32,8 @@
 *.app
 
 # Build
-./Debug/
+*Debug/
+*x64/
 
 # VS
-/.vs
+.vs
