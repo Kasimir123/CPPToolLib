@@ -18,7 +18,7 @@ public:
 
 private:
     ostream *m_out;
-    const string &m_delim;
+    const string m_delim;
 
     template<typename T>
     string doPrint(const string &format, T arg) {
