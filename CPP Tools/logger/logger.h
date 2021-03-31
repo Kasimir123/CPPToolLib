@@ -9,7 +9,7 @@ public:
     explicit Logger(ostream &out, const string &delim="[%]") : m_out(&out), m_delim(delim) {}
 
     template<typename H, typename... Args>
-    void print(const string &format, H head, Args... tail) {
+    void print(const string &format, const H& head, const Args&... tail) {
         auto newFormat = doPrint(format, head);
         if (newFormat.length() > 0) {
             print(newFormat, tail...);
@@ -21,7 +21,7 @@ private:
     const string m_delim;
 
     template<typename T>
-    string doPrint(const string &format, T arg) {
+    string doPrint(const string &format, const T& arg) {
         int idx = format.find(m_delim);
         string substr;
         string newFormat;
@@ -42,7 +42,7 @@ private:
     }
 
     template<typename T>
-    void print(const string &format, T nextArg) {
+    void print(const string &format, const T& nextArg) {
         auto newFormat = doPrint(format, nextArg);
         *m_out << newFormat;
     }
