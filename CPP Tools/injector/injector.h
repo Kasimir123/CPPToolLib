@@ -8,5 +8,6 @@ namespace injector
 	/// <param name="dllPath"></param>
 	/// <param name="hProc"></param>
 	void LocAInject(const char* dllPath, HANDLE hProc);
-}
 
+	void ManMapInject(const char* dllPath, HANDLE hProc);
+}
